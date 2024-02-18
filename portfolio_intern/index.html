@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="./style1.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <title>Portfolio</title>
+
+  <style>
+    header{
+      width:100%;
+      height:100vh;
+      background-image: url(./back.jpg);
+      /*linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)) */
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin-bottom: 5px;
+    background-color: #11101b;
+    align-items: center; 
+    justify-content: space-between;
+
+    }
+    .nav {
+      background-color:black;
+      color:white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-transform: capitalize;
+      position: relative;
+      font-family: 'Roboto', sans-serif;
+      background: rgba(0,0,0,0.3);
+      /* font-size: large; */
+      /* overflow: hidden; */
+    }
+    .nav-link{
+      padding-left: 2.5rem;
+    }
+
+    .nav-link :hover {
+      color: #e85c29;
+    }
+
+    .animated {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      margin-top: 15px;
+
+    }
+    .justify-content-end a {
+      margin-right: 3px;
+      margin-top: 10px;
+      padding-top: 15px;
+      color: white;
+      position: relative;
+
+    }
+
+    .justify-content-end a:hover {
+      color: black;
+      background-color: white;
+      margin-top: 10px;
+      border-radius: 30px;
+      /* box-sizing: border-box; */
+    }
+    .animated {
+   font-size: 10px;
+   font-weight: bold;
+   color: white;
+   margin-top: 15px;
+  } 
+
+  main{
+    width:100%;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top:250px;  
+    padding-right: 2em;
+    margin-left: 10px;
+    }
+    main h1{
+        font-size: 35px;
+        font-weight:200;
+        letter-spacing: 5px;
+        text-shadow: 2px 2px 2px black;
+        font-family:'Times New Roman', Times, serif;
+        /* display: flex; */
+        grid-template-columns: auto;
+    }
+    .resume{ 
+    border-width: 5px;;
+    border-radius: 55px;
+     text-decoration: none;
+    border: black; 
+    border-color: black;
+    background-color:white;
+    padding: 15px 15px 15px 15px; 
+    margin-top: 15px;
+    text-shadow: 1px 1px 2px white;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 200px; 
+
+  }  
+
+  .resume :hover{
+    color:red;
+  } 
+
+  .info{
+        width:100%;
+        height: 100vh;
+        background-color: #f490a2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: black;
+        text-align: center;
+        padding-top:100px;
+        margin-top:5px;
+        margin-bottom: 5px;
+    }
+    .info h1{
+        font-size: 55px;
+        color:whitesmoke;  
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .info h5{
+        font-size: 18px;
+        letter-spacing: 1px ;
+        line-height: 24px;
+    }
+    .info #AboutMe{
+      color:rgb(56, 22, 52);
+      margin-top: 2px;
+
+    }
+    .info h3 span{
+        color:rgb(209, 86, 41);
+        text-shadow: 1px 1px 2px black;
+    }
+    .info #about{
+        text-align: center;
+    }
+    .info h5 span{
+      color:red;
+      text-shadow: 1px 1px 2px black;
+    }
+    /* Skills Section */
+    #SkillHead{
+      color:#e9ecef;
+      margin-top: 2px;
+    }
+   
+    #containers{
+    width:100%;
+    height:100vh;
+    /* background: #e35353; */
+    background: #790d79;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    /* margin-bottom: -9rem; */
+    
+    }
+   
+    .skills h2{
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin-top: 40px;
+      margin-bottom: 5px;color: white;
+      font-size: 16px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .progress{
+      background: #959595;
+      width:600px;
+      height:10px;
+      border-radius: 10px;
+    }
+    .progress div{
+      height: 10px;
+      border-radius: 5px;
+      width: 0%;
+    }
+    .progress div span{
+      height:40px;
+      width:40px;
+      border-radius: 50%;
+      background:#222;
+      float:right;
+      margin-top: -15px;
+      margin-right: -20px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .html{
+      background: #008000;
+      animation: HTML 1s linear forwards;
+    }
+    .css{
+      background: rgb(197, 78, 98);
+      animation: CSS 1s linear forwards;
+    }
+    .js{
+      background:palegreen ;
+      animation: JAVASCRIPT 1s linear forwards;
+    }
+    .c{
+    background:blueviolet ;
+    animation: C 1s linear forwards;
+    }
+    .cpp{
+      background: rgb(234, 234, 70);
+      animation: CPP 1s linear forwards;
+    }
+    .py{
+      background:orangered ;
+      animation: PYTHON 1s linear forwards;
+    }
+    .css span{
+      border:2px solid rgb(197, 78, 98);
+    }
+    .js span{
+      border:2px solid palegreen;
+    }
+    .c span{
+      border:2px solid blueviolet;
+    }
+    .cpp span{
+      border:2px solid rgb(234, 234, 70);
+    }
+    .py span{
+      border:2px solid orangered;
+    }
+    .html span{
+      border:2px solid green;
+    }
+    @keyframes HTML{
+      100%{
+          width:70%
+      }
+    }
+    @keyframes CSS{
+      100%{
+          width:55%
+      }
+    }
+    @keyframes JAVASCRIPT{
+      100%{
+          width:45%
+      }
+    }
+    @keyframes C{
+      100%{
+          width:90%
+      }
+    }
+    @keyframes CPP{
+      100%{
+          width:70%
+      }
+    }
+    @keyframes PYTHON{
+      100%{
+          width:50%
+      }
+    }
+    .types{
+    margin-top:5px;
+    width:100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    }
+    .types1{
+        margin-top:5px;
+        width:100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+    /* Projects section */
+    #projects{
+      width: 100%;
+      height: 100vh;
+      background-color: #008000;
+    }
+    .container{
+    display: flex;
+    width: 70%;
+    justify-content: space-around;
+    /* margin-top: 10rem; */
+    padding-top: 10rem;
+    display: flex;
+    background-color: #11101b;
+    }
+    .card{
+        width: 250px;
+        height: 360px;
+        padding: 2rem;
+        background: #fff;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.5);
+        transition:0.5s ease-in-out;
+        margin-left: 20px;
+    }
+    .card:hover{
+        transform: translate(20px);
+    }
+    .card:before{
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        z-index:2;
+        transition: 0.5s all;
+        opacity: 0;
+    }
+    .card:hover:before{
+        opacity: 1;
+    }
+    .card img{
+        width: 100%;
+        height: 100%;
+        object-fit:initial;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .card .infos{
+        position: relative;
+        z-index:3;
+        color:#fff;
+        opacity:0;
+        transform:translate(30px);
+        transition: 0.5s all;
+    }
+    .card:hover .infos{
+        opacity: 1;
+        transform: translate(0px);
+    }
+    .card .infos h1{
+        margin: 0;
+        color:rgb(37, 39, 34);
+    }
+    .card .infos p{
+        letter-spacing: 1px;
+        font-size:15px;
+        margin-bottom: 20px;
+    }
+    .card .infos .btn{
+        text-decoration: none;
+        padding: 0.5rem 1rem ;
+        background:#e7d8d8;
+        color:#000;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        border-radius: 5px;
+        margin-top: 50%;
+    }
+    .card .infos .btn:hover{
+        box-shadow: 0px 7px 10px rgba(0,0,0,0.7);
+        background-color: black;
+        color: #fff;
+    }
+  
+  /*Certificates   */
+  #certificate{
+   width:100%;
+   height:100vh;
+   background-color: #e35353;
+  }
+  #certificate h1{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  /* footer */
+  #contact{
+    width: 100%;
+   background-color: violet;
+   margin-bottom: 5px;
+    padding-top: 1rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: start;
+   /* align-items: center; */
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   }
+    #contact a{
+      padding-top: 4px;
+      text-decoration: none;
+      justify-content: space-between;
+      font-size: 15px;
+    }
+    #contact .name{
+      /* padding-left: 150px; */
+      border-radius: 5px;
+      height: 30px;
+      /* width:120px; */
+
+    }
+    #contact .linkedin{
+      width: 30px;
+      height:30px;
+      padding-top: 5px;
+    }
+    #contact .mail{
+      width:30px;
+      height:30px;
+      /* padding-left: 150px; */
+    }
+    input{
+      /* background: 10%; */
+      border-radius: 10%;
+      margin-bottom: 0.5rem;
+    }
+    .footer{
+        padding-left:75px;
+        font-size:larger;
+        font-style:oblique;
+        font-family:cursive;
+    }
+    .contact{
+        width:100%;
+        height:100%;
+        margin-top: 10px;
+    }
+
+    .link1{
+        text-decoration: none;
+    }
+    .link2{
+        text-decoration:none;
+    }
+    .link1 :link{
+        color:blue;
+    }
+    .link1 :visited{
+        color:green;
+    }
+    .link1 :hover{
+        color:blue;
+    }
+    .link1 :hover{
+        color:red;
+    }.link1 :link{
+        color:blue;
+    }
+    .link1 :active{
+        color:purple;
+    }
+    .link2 :link{
+        color:blue;
+    }
+    .link2  :visited{
+        color:green;
+    }
+    .link2 :hover{
+        color:blue;
+    }
+    .link2  :hover{
+        color:red;
+    }.link2 :link{
+        color:blue;
+    }
+    .link2 :active{
+        color:yellow;
+    }
+    .form .name{
+      border-radius: 50%;
+    }
+    .last{
+      display: flex;
+      justify-content: flex-end;
+      /* padding-left: 1250px; */
+    }
+    /* .imgs{
+      display:inline;
+     margin-bottom: 10rem;
+    } */
+
+    /*-----------MEDIA QUERY --------------------------*/
+@media (max-width: 900px){
+    main{
+        height: 55vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding-top:250px;  
+        padding-right: 2em;
+        margin-left: 10px;
+    }
+    .info{
+      padding: 5px;
+    }
+   
+    .progress{
+      background: #959595;
+      width:300px;
+      height:10px;
+      border-radius: 10px;
+    }
+    .progress div{
+      height: 10px;
+      border-radius: 5px;
+      width: 0%;
+    }
+    .progress div span{
+      height:40px;
+      width:40px;
+      border-radius: 50%;
+      background:#222;
+      float:right;
+      margin-top: -15px;
+      margin-right: -20px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .types  {
+    display: flex;
+    align-items: center;
+    margin-top: 1vh;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+    .types1 {
+    align-items: center;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+    .container{
+        display: block;
+        align-items: center;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    }
+    .card{
+        margin-bottom: 20px;
+    }
+
+    .types1{
+        /* justify-content: center; */
+        align-items: center;
+        margin-top: 1vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+ .card{
+        
+        display: block;
+        justify-content: space-between;
+    }
+    
+ .types{
+        display: flex;
+        
+        align-items: center;
+        margin-top: 1vh;
+        flex-direction: column;
+    justify-content: space-around;
+    }
+
+  }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light" >
+      <a class="animated infinite heartBeat" style="color:white;font-size:xx-large;font-family:cursive;">PORTFOLIO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="background-color:white ;border-radius: 4px;"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="color: white;">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#" style="color:white;font-size:x-large">Home <span
+                class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#AboutMe" style="color:white;font-size:x-large">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#containers" style="color:white;font-size:x-large">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#certificate" style="color:white;font-size:x-large">Certificates</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" style="color:white;font-size:x-large">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <h1>JUVERIYA BEGUM</h1>
+      <br>
+      <h3>CSE|II YEAR</h3>
+      <br>
+      <a class="resume" href="#"> DOWNLOAD CV</a>
+  </main>
+
+</header>
+  <br>
+ 
+
+  <!-----------------about myself----------------------->
+
+  <div class="info">
+
+    <h1><span id="AboutMe">ABOUT ME</span></h1>
+
+    <h3>I AM <span>JUVERIYA BEGUM</span></h3>
+    <br>
+
+    <p>I am a CSE student</p>
+    <br>
+
+    <p>I am pursuing my Bachelors of Engineering from Muffakham Jah College of Engineering and Technology </p>
+    <br>
+
+    <p>My goal is to become a
+    <h5><span>F</span>ULL <span>S</span>TACK <span>D</span>EVELOPER</h5>
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, reprehenderit illum cumque nemo hic cum
+        laboriosam perspiciatis nam, assumenda aperiam voluptate praesentium maxime, natus harum quidem voluptatum
+        blanditiis. Assumenda, minus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, labore
+        reprehenderit? Obcaecati, temporibus esse. Ipsa molestias quas cum minus. Eius maxime aliquid culpa sit nemo
+        voluptas, debitis excepturi laborum non.</p>
+
+    </div>
+
+      <!------------------SKILLS section------------------------>
+      <section id="containers">
+        <div class="skills">
+          <h1><span id="SkillHead">SKILLS</span></h1>
+            <h2>HTML</h2>
+            <div class="progress">
+                <div class="html"><span>70%</span></div>
+            </div>
+
+            <h2>CSS</h2>
+            <div class="progress">
+                <div class="css"><span>55%</span></div>
+            </div>
+
+            <h2>JAVASCRIPT</h2>
+            <div class="progress">
+                <div class="js"><span>45%</span></div>
+            </div>
+
+            <h2>C</h2>
+            <div class="progress">
+                <div class="c"><span>90%</span></div>
+            </div>
+
+            <h2>C++</h2>
+            <div class="progress">
+                <div class="cpp"><span>70%</span></div>
+            </div>
+
+            <h2>python</h2>
+            <div class="progress">
+                <div class="py"><span>50%</span></div>
+            </div>
+
+        </div>
+    </section>
+ 
+  <br>
+  <!-- Project section -->
+   
+    <section style="background-color:#b2beb5;">
+      <h2 class="line" style="text-align: center; align-items: center; justify-content: center;">PROJECTS</h2>
+      <br>
+    <div class="types" >
+      
+      
+      <div class="card one" style="width: 18rem;">
+
+        <img class="card-img-top" src="./CALCI.jpg" alt="Card image cap">
+        <div class="infos">
+         <h1>Calculator</h1>
+          
+          <a href="https://calculator-juveriya.netlify.app/"  target="_blank" class="btn btn-primary">Click</a>
+        </div>
+      </div>
+
+      <div class="card two" style="width: 18rem;">
+        <img class="card-img-top" src="./tempandunits].png" alt="Card image cap">
+        <div class="infos">
+          <h1>temp-and-unit-converter</h1>
+         
+          <a href="https://temp-and-unit-conveter.netlify.app/"  target="_blank"  class="btn btn-primary">Click</a>
+        </div>
+      </div>
+
+      <div class="card three" style="width: 18rem;">
+        <img class="card-img-top" src="./HostelHub.png" alt="Card image cap">
+        <div class="infos">
+          <h1>Hostel Website Template</h1>
+     
+          <a href="https://hostelhubcom.netlify.app/"  target="_blank"  class="btn btn-primary">Click</a>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="types1">
+
+        <div class="card four" style="width: 18rem;">
+          <img class="card-img-top" src="./smsa.webp" alt="Card image cap">
+          <div class="infos">
+            <h1>Secret-Message-Sharing</h1>
+            <a href="https://juveriya-secretmessagesharing-app.netlify.app/" target="_blank" class="btn">Click</a>
+          </div>
+        </div>
+
+      <div class="card five" style="width: 18rem;">
+        <img class="card-img-top" src="./TicTactoe.png" alt="Card image cap">
+        <div class="infos">
+            <h1>Tic-Tac-Toe</h1>
+            <a href="https://tictactoe-juveriya05.netlify.app/" target="_blank" class="btn">Click</a>
+        </div>
+      </div>
+
+      <!-- <div class="card six" style="width: 18rem;">
+        <img class="card-img-top" src="./Images/c5.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Los Potis</h5>
+          <p class="card-text">Durban, America</p>
+          
+          <a href="./register/index.html" target="_blank" class="btn btn-primary">Reserve this Hostel</a>
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+
+    <br>
+ 
+       <!-------------------CERTIFICATES ------------------------>
+          <!-- <section id="certificate">
+            <h1>CERTIFICATES</h1>
+            <div class="imgs">
+                <img src="./c1.jpeg" alt="" width="50%" height="20%" >
+                <img src="./c2.jpeg" alt="" width="50%" height="20%">
+                <img src="./c3.jpeg" alt="" width="50%" height="20%">
+            </div>
+        </section>
+        <br> -->
+     <!--------------- footer------------------------- -->
+
+     <div id="contact">
+      <h4>CONTACT ME THROUGH:</h4>
+      <a href="https://www.linkedin.com/in/juveriya-begum-02450125a" target="_blank">
+          <img src="./icon.png" alt="" class="linkedin">LINKEDIN</a>
+
+      <a href="mailto:juveriyabegum02@gmail.com" target="_blank">
+          <img src="./mail.png" alt="" class="mail">Mail</a>
+      <br>
+
+      <div class="form">
+          <form action="https://formspree.io/f/mnqwkvlr" method="POST">
+              <input type="text" name="name" id="name" placeholder="Name"> <br>
+              <input type="email" name="email" id="email" placeholder="E-mail">
+              <br>
+              <textarea name="message" id="message" cols="30" rows="10"
+                  placeholder="Send a message / Report a bug."></textarea>
+              <br>
+              <button type="submit" class="submit"><i class="far fa-paper-plane"> Submit</i></button>
+              <br>
+          </form>
+          <br>
+
+      </div>
+      <div class="last">
+          <footer class="footer" >
+              <b>CREATED BY:</b>
+              <div class="name1" type="text">
+                  -Juveriya Begum
+                  <p>|<span>©</span>All Rights Reserved</p>
+
+          </footer>
+      </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
